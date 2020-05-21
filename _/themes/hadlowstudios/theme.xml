@@ -1,0 +1,120 @@
+
+<theme>
+	<data>
+		<name>Hadlow Studios Theme</name>
+		
+		<description>This theme was created by Hadlow Studios.</description>
+		
+		<image>/img/screenshot.png</image>
+		
+		<author>Billy Hadlow</author>
+	</data>
+	
+	<widgets>
+		<widget>
+			<label>Main menu</label>
+			
+			<name>main_menu</name>
+			
+			<type>menu</type>
+		</widget>
+		
+		<widget>
+			<label>Footer content</label>
+			
+			<name>footer_content</name>
+			
+			<type>wysiwyg</type>
+		</widget>
+		
+		<widget>
+			<label>Disquss shortname</label>
+			
+			<name>disquss_shortname</name>
+			
+			<type>text</type>
+		</widget>
+	</widgets>
+	
+	<templates>
+		<template>
+			<title>Standard page</title>
+			
+			<name>page</name>
+			
+			<image>http://www.placehold.it/800x500</image>
+			
+			<form>
+				<input>
+					<label>Featured image</label>
+					
+					<name>image</name>
+					
+					<type>image</type>
+				</input>
+			</form>
+		</template>
+		
+		<template>
+			<title>Blog post</title>
+			
+			<name>post</name>
+			
+			<form>
+				<input>
+					<label>Caption</label>
+					
+					<name>caption</name>
+					
+					<type>text</type>
+				</input>
+				
+				<input>
+					<label>Featured image</label>
+					
+					<name>image</name>
+					
+					<type>image</type>
+				</input>
+			</form>
+		</template>
+		
+		<template>
+			<title>Home page</title>
+			
+			<name>home</name>
+			
+			<form>
+				<input>
+					<label>Second content</label>
+					
+					<name>content2</name>
+					
+					<type>textarea</type>
+				</input>
+				
+				<input>
+					<label>Third content</label>
+					
+					<name>content3</name>
+					
+					<type>textarea</type>
+				</input>
+				
+				<input>
+					<label>Fourth content</label>
+					
+					<name>content4</name>
+					
+					<type>textarea</type>
+				</input>
+			</form>
+		</template>
+		
+		<template>
+			<title>Blog page</title>
+			
+			<name>list</name>
+		</template>
+	</templates>
+</theme>

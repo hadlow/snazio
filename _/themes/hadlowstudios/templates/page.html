@@ -1,0 +1,21 @@
+{% include 'partials/header.html' %}
+    <header class="intro-header" style="background-image: url('{{ fields.image }}')">
+        <div class="container">
+            <div class="row">
+				<div class="post-heading page">
+					<h1>{{ meta.title }}</h1>
+				</div>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </article>
+{% include 'partials/footer.html' %}

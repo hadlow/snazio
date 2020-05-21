@@ -1,0 +1,39 @@
+{% include 'partials/header.html' %}
+    <header class="intro-header" style="background-image: url('{{ fields.image }}')">
+        <div class="container">
+            <div class="row">
+				<div class="post-heading">
+					<h1>{{ meta.title }}</h1>
+					
+					<h2 class="subheading">{{ fields.caption }}</h2>
+					
+					<span class="meta">Posted by {{ author.name }} {{ date.timeago }} ago <small>({{ date.worded }})</small></span>
+				</div>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {{ content }}
+					
+					<div id="disqus_thread"></div>
+					
+					<script type="text/javascript">
+						var disqus_shortname = '{{ global.disquss_shortname }}';
+
+						(function() {
+						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						})();
+					</script>
+					
+					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
+            </div>
+        </div>
+    </article>
+{% include 'partials/footer.html' %}

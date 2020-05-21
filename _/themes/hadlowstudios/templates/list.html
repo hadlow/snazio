@@ -1,0 +1,29 @@
+{% include 'partials/header.html' %}
+    <header class="intro-header" style="height:61px; background-color:#252525;">
+        
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				{% for post in posts %}
+					<div class="post-preview">
+						<a href="{{ post.link }}">
+							<h2 class="post-title">
+								{{ post.title }}
+							</h2>
+							
+							<p class="post-subtitle">
+								{{ post.excerpt }}
+							</p>
+						</a>
+						
+						<p class="post-meta">Posted by {{ post.author.name }} {{ post.date.timeago }} ago</p>
+					</div>
+					
+					<hr>
+				{% endfor %}
+            </div>
+        </div>
+    </div>
+{% include 'partials/footer.html' %}

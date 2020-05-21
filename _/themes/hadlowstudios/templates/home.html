@@ -1,0 +1,47 @@
+{% include 'partials/header.html' %}
+    <header class="intro-header" style="background-image: url('{{ theme_url }}/assets/img/home-bg.jpg');">
+        <div class="container">
+            <div class="row">
+				<div class="site-heading">
+					<img src="{{ theme_url }}/assets/img/splashlogo.png" />
+					
+					<h2>We're Hadlow Studios</h2>
+					
+					<span class="subheading">We create awesome stuff.</span>
+				</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				{% for post in posts %}
+				{% if loop.index0 < 3 %}
+					<div class="post-preview">
+						<a href="{{ post.link }}">
+							<h2 class="post-title">
+								{{ post.title }}
+							</h2>
+							
+							<p class="post-subtitle">
+								{{ post.excerpt }}
+							</p>
+						</a>
+						
+						<p class="post-meta">Posted by {{ post.author.name }} {{ post.date.timeago }} ago</p>
+					</div>
+					
+					<hr>
+				{% endif %}
+				{% endfor %}
+                
+                <ul class="pager">
+                    <li class="next">
+                        <a href="{{ base_url }}blog">Older Posts &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% include 'partials/footer.html' %}
